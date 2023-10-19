@@ -1,0 +1,19 @@
+<div class="parent">
+  <div class="header">
+    <h1>Producer/Consumer Simulation Program</h1>
+  </div>
+  <div class="buttons">
+    <button (click)="addMachine()" class="_button" id='machine'>Add Machine</button>
+    <button (click)="addQueue()" class="_button" id='queue'>Add Queue</button>
+    <button (click)="connect()" class="_button" id='Connect'>Connect</button>
+    <button (click)="addProduct()" class="_button" id='product'>Add Product</button>
+    <button (click)="Start()" class="_button" id='start'>Start</button>
+    <button (click)="Replay()" class="_button" id='replay'>Replay</button>
+  </div>
+  <div class="canvas">
+    <canvas #canvas width="1500px" height="600px"></canvas>
+  </div>
+  <div>
+    <div class="input-counter">0</div>
+    <div class="output-counter">0</div>
+  </div>

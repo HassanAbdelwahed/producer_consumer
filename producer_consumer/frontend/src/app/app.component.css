@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header{
+  margin: 10px;
+  text-align: center;
+}
+.buttons {
+  padding: 5px;
+  margin: 10px 10px 0px 10px;
+  background-color:black;
+  display: flex;
+}
+.buttons button{
+  margin: 2px;
+  display: block;
+
+}
+
+.canvas {
+  margin: 10px;
+  margin-top: 0px;
+  display: block;
+  height: 600px;
+  background-color:cadetblue;
+}
+
+._button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.clicked {
+  background-color: white;
+  color: black;
+}
+
