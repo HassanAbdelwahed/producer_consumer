@@ -94,7 +94,7 @@ export class AppComponent implements OnInit{
 
   handleChanges(data: any) {
     data = JSON.parse(data);
-    
+
     console.log(data);
 
     // change inqueues product number
@@ -319,6 +319,30 @@ export class AppComponent implements OnInit{
       group?._objects[1]._set('text', "Q" + i + "\n" + "n=0");
     }
     this.canvas.renderAll();
+  }
+  Clear(){
+    this.machineID = 0;
+    this.queueID= -1;
+    this.isConnect = false;
+    this.isDrawing = false;
+    this.isRunning = false;
+
+    this.machines = new Map<number, fabric.Group>;
+    this.queues = new Map<number, fabric.Group>;
+    this.countProduct = 0;
+
+    this.machine = new Machine();
+    this.queue = new Queue();
+    this.line = new Line();
+
+    const context = this.canvas.getContext();
+    context.clearRect(0, 0, this.canvas.width || 1500, this.canvas.height || 600);
+    this.canvas.clear();
+    this.http.get('http://localhost:8080/clear/').subscribe(
+      event => {
+        console.log(event);
+      }
+    );
   }
 
 }

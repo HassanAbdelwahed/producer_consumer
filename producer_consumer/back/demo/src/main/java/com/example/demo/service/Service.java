@@ -99,4 +99,12 @@ public class Service {
         container.setDataQueues(this.queues);
         return container;
     }
+    public void clear() {
+        for (Thread thread: threads){
+            thread.interrupt();
+        }
+        this.threads = new ArrayList<>();
+        this.machines = new ArrayList<>();
+        this.queues = new ArrayList<>();
+    }
 }

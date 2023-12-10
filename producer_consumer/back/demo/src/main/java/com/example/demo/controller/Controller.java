@@ -103,7 +103,11 @@ public class Controller {
             Thread.sleep(Integer.parseInt(state[state.length - 1]));
             disPatch(state);
         }
-
     }
+    @GetMapping("clear/")
+    public void clear() {
+        this.service.clear();
+    }
+
 
 }
