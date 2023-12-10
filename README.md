@@ -14,4 +14,4 @@ The simulation system support the following features
 - color being processed by it then change back to a default color once done to make following the simulation easy for the user.
 - After the simulation ends, the user can start a new simulation or replay the previous simulation
 
-![Caputre.PNG]
+![Example Image](Capture.PNG)
